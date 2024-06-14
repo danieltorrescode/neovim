@@ -1,6 +1,2 @@
 require("settings")
 require("lazy-setup")
-require("packages-setup")
-require("dashboard-setup")
-require("autoformat")
-require("debug")
