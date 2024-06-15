@@ -7,6 +7,7 @@ local treesitter_setup = require 'treesitter-setup'
 local gitsign_setup = require 'gitsigns-setup'
 local completion_setup = require 'completion-setup'
 local formatters_setup = require 'formatters-setup'
+local linters_setup = require 'linters-setup'
 -- local debug = require("debug")
 
 -- [[ Install `lazy.nvim` plugin manager ]]
@@ -49,4 +50,5 @@ require('lazy').setup({
   gitsign_setup,
   completion_setup,
   formatters_setup,
+  linters_setup,
 }, {})

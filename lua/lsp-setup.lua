@@ -159,7 +159,7 @@ return { -- LSP Configuration & Plugins
     local servers = {
       -- clangd = {},
       -- gopls = {},
-      -- pyright = {},
+      pyright = {},
       -- rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
@@ -167,9 +167,10 @@ return { -- LSP Configuration & Plugins
       --    https://github.com/pmizio/typescript-tools.nvim
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
-      -- tsserver = {},
+      tsserver = {},
+      html = {},
+      cssls = {},
       --
-
       lua_ls = {
         -- cmd = {...},
         -- filetypes = { ...},
@@ -199,6 +200,11 @@ return { -- LSP Configuration & Plugins
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
+      'isort', -- python formatter
+      'black', -- python formatter
+      'pylint',
+      'prettier', -- prettier formatter
+      'eslint_d',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
