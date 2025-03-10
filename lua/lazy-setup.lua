@@ -9,6 +9,8 @@ local completion_setup = require 'completion-setup'
 local formatters_setup = require 'formatters-setup'
 local linters_setup = require 'linters-setup'
 local neorg_setup = require 'neorg-setup'
+local nvim_tree_setup = require 'nvim-tree-setup'
+local oil_setup = require 'oil-setup'
 -- local debug = require("debug")
 
 -- [[ Install `lazy.nvim` plugin manager ]]
@@ -53,4 +55,6 @@ require('lazy').setup({
   formatters_setup,
   linters_setup,
   neorg_setup,
+  nvim_tree_setup,
+  oil_setup,
 }, {})
